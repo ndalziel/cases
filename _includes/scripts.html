@@ -9,3 +9,54 @@
 <script src="js/galleryExpand.js"></script>
 <!-- <script src="js/init.js"></script> -->
 <script src="js/init-new.js"></script>
+
+<!-- Firebase SDKs -->
+<!-- <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script> -->
+<!-- <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script> -->
+
+<!-- <script>
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+</script> -->
+<script>
+    const FORM_URL =
+      "https://docs.google.com/forms/d/e/1FAIpQLSceJ5PbCpNmqwlmkn_h9m-Rytw6oQaHKABjzkujCmtPJYy6-Q/formResponse";
+  
+    const EMAIL_ENTRY_ID = "entry.2089893641";
+    
+    const gate = document.getElementById("email-gate");
+    const content = document.getElementById("protected-content");
+  
+    const storedEmail = localStorage.getItem("user_email");
+  
+    if (storedEmail) {
+      gate.style.display = "none";
+      content.style.display = "block";
+    }
+  
+    document.getElementById("continueBtn")?.addEventListener("click", () => {
+      const email = document.getElementById("emailInput").value;
+      if (!email) return;
+  
+      const formData = new FormData();
+      formData.append(EMAIL_ENTRY_ID, email);
+      // formData.append(PAGE_ENTRY_ID, window.location.pathname);
+  
+      fetch(FORM_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+      });
+  
+      localStorage.setItem("user_email", email);
+      gate.style.display = "none";
+      content.style.display = "block";
+    });
+  </script>  
+  

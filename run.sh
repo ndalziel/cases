@@ -12,3 +12,5 @@ docker run --rm -it \
   -v "$(pwd)":/srv/jekyll \
   -w /srv/jekyll \
   $IMAGE_NAME
+
+  
