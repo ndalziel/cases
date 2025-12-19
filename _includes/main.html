@@ -1,21 +1,40 @@
 <div id="portfolio" class="section gray">
     <div class="container">
 
-        <div id="email-gate">
+        <!-- <div id="email-gate">
             <h2>Enter your email to continue</h2>
             <input type="email" id="emailInput" required />
             <button id="continueBtn">Continue</button>
-          </div>
+        </div> -->
           
-          <div id="protected-content" style="display:none;">
-            <h4 class = "center-align">Consulting Case Books</h4>
-                <p class="light">Crafting Cases </p>
-                    <ul>
-                        <li><a href="files/CraftingCasesSideA.pdf">Casebook Side A</a></li>
-                        <li><a href="files/CraftingCasesSideB.pdf">Casebook Side B</a></li>
-                    </ul>
-                <p class="light">Lorem Ipsum  </p>
+        <div id="protected-content" style="display:none;">
+            <h4 class = "center-align">Consulting Case Books</h4>        
+        </div>
+
+        <p>
+            Welcome to our collection of business school casebooks, 
+            curated to help students, educators, and professionals explore 
+            real-world business challenges. This site gathers a wide range of 
+            case materials across different schools and subjects, making them 
+            easy to access in one place. If you have additional casebooks that 
+            could enrich this collection, we’d love to hear from you. Please 
+            contact us to contribute your materials and help expand this resource 
+            for the community.
+        </p>
+        <div class="gallery row">
+            {% include columbia.html %}
+            {% include cornell.html %}
+            {% include darden.html %}
+            {% include duke.html %}
+            {% include hbs.html %}
+            {% include tuck.html %}
         </div>
     </div>
 </div>
+
+
+
+
+
+
 

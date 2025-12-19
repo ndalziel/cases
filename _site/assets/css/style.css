@@ -8063,6 +8063,21 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+/* body {
+  padding-top: 64px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding-top: 56px;
+  }
+} */
+
+
+.page-content {
+  margin-top: 64px; /* navbar height */
+}
+
 ul {
   margin: 0;
 }
@@ -8336,6 +8351,7 @@ nav .categories-wrapper .categories-container .categories > li {
   top: 0;
   z-index: 3;
   transition: background-color 0.3s;
+  background-color: #607d8b; /* blue-grey */
 }
 #placeholder-navbar .back-btn {
   padding: 0;
@@ -8615,5 +8631,16 @@ img[alt=Innovation] {
   bottom: 15px;
   z-index: 2;
 }
+
+.page-header {
+  height: 64px;
+  display: flex;
+  align-items: center;   /* vertical centering */
+}
+
+.page-header {
+  margin: 0;
+}
+
 
 /*# sourceMappingURL=style.css.map */
